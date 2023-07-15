@@ -1,0 +1,40 @@
+<pre>
+spread operator   ...   use to extract array elements
+
+</pre> 
+
+<script>
+    arr1=[3,45,23,12,56]
+
+    console.log(...arr1)
+
+
+    arr2=[13,11,...arr1]
+
+    console.log(arr2)
+    
+
+    product={
+            name:"abc",
+            company:"xyz",
+            size:[...arr2]                
+            }
+
+
+console.log(product)
+
+
+
+function add(...n)
+{
+    let sum=0
+    n.forEach((e)=>
+    {
+        sum+=e
+    })
+    console.log(sum)
+}
+
+add(48,23,1,5,8,45,36)
+
+</script>

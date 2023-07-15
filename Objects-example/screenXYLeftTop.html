@@ -1,0 +1,30 @@
+<script>
+
+    let x
+    let y
+    function screenXYLeftTop() {
+        x = screenX
+        y = screenY
+        topV = screenTop
+        left = screenLeft
+        alert(`${x}--${y} ${topV}--${left}`)
+    }
+
+    let win
+
+    function openWin() {
+        win = open("", "", "height=100, width=200")
+
+
+    }
+
+    function moveWin() {
+        win.moveBy(x + 100, y)
+        win.focus()
+    }
+
+</script>
+
+<button onclick="screenXYLeftTop()">Check</button>
+<button onclick="openWin()">Open</button>
+<button onclick="moveWin()">Move</button>

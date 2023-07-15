@@ -1,0 +1,32 @@
+<script>
+
+    let win
+function OpnWin()
+{
+ win=open("parent-win-focus-blur.html","","height=400, width=300")
+ win.focus()
+}
+
+
+    function focusWin()
+    {
+        win.focus()
+
+    }
+    function blurWin()
+    {
+        win.blur()
+    }
+
+
+
+</script>
+
+
+<button onclick="OpnWin()">Open</button>
+<button onclick="focusWin()">Focus</button>
+<button onclick="blurWin()">Blur</button>
+
+
+<iframe src="parent-win-focus-blur.html" style="height:400; width:300">
+</iframe>

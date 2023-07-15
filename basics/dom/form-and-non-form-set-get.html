@@ -1,0 +1,75 @@
+
+<pre>
+
+non form elements innerHTML/innerText  (setter/getter)
+ p, pre, body, header, div, span, b, i----
+
+form elements  value (setter/getter)
+
+input, select, textarea, button,label, .......
+
+</pre>
+
+<input id="inpt" placeholder="enter text for para">
+
+<p id="p1">This is paragraph 1</p>
+<p id="p2">This is paragraph 1</p>
+
+<input id="inpt2"> 
+
+<button onclick="getP1()">Get Data p1</button>
+
+<button onclick="getP2()">Get Data p2</button>
+
+<button onclick="setP1()">Set Data p1</button>
+
+<button onclick="setP2()">Set Data p2</button>
+
+<button onclick="setInput2()">Set Data input 2</button>
+
+<script>
+
+function getInputData()//getter for input
+{
+	return document.getElementById("inpt").value
+}
+
+function setP1()
+{
+	txt=getInputData()
+	
+	document.getElementById("p1").innerHTML=txt
+}
+
+
+function setP2()
+{
+	txt=getInputData()
+	
+	document.getElementById("p2").innerHTML=txt
+}
+
+function getP1()
+{
+	txt=document.getElementById("p1").innerHTML//getter
+	
+	alert(txt)
+}
+
+function getP2()
+{
+	txt=document.getElementById("p2").innerHTML//getter
+	
+	alert(txt)
+}
+
+function setInput2()
+{
+	txt=document.getElementById("inpt").value//getter
+	
+	document.getElementById("inpt2").value=txt
+}
+
+</script>
+
+

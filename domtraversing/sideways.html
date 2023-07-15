@@ -1,0 +1,52 @@
+<pre>
+    Single Element
+    getElementById
+
+    Array Elements
+    getElementsTagName
+    getElementsClassName
+    getElementsName
+
+    Single Element
+    querySelector
+
+    Array Elements
+    querySelectorAll
+
+
+
+Downward
+Upward
+Sideways
+
+</pre>
+
+
+<ul class="list">
+    <li><a href="#">One</a></li>
+    <li><a href="#">Two</a></li>
+    <li><a href="#">Three</a></li>
+    <li><a href="#">Four</a></li>
+    <li><a href="#">Five</a></li>
+</ul>
+
+
+<script>
+    //nextElementSibling
+    //previousElementSibling
+
+
+    let li = document.querySelector("li")//<li><a href="#">One</a></li>
+
+    nextLi = li.nextElementSibling // <li><a href="#">Two</a></li>
+
+    console.log(nextLi.nextElementSibling)
+
+
+    li_4 = document.querySelectorAll("li")[3]//<li><a href="#">Four</a></li>
+    li_3 = li_4.previousElementSibling
+
+    console.log(li_3)
+
+
+</script>

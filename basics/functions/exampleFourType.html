@@ -1,0 +1,23 @@
+<script>
+
+    function addKgValues(kg1, kg2) {
+        return (kg1 + kg2)
+    }
+    function addKgValuesNoRt(kg1, kg2) {
+        alert("Total kg=" + (kg1 + kg2))
+    }
+
+    function gmToKgFun(gm) {
+        kg = gm / 1000
+        return kg
+    }
+
+    kg1 = gmToKgFun(30045)
+    alert("Kg=" + kg1)
+    kg2 = gmToKgFun(45945)
+    alert("Kg=" + kg2)
+
+    alert("Total kg=" + addKgValues(kg1, kg2))
+    addKgValuesNoRt(kg1, 90777)
+
+</script>

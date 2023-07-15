@@ -1,0 +1,50 @@
+<script>
+    students = {
+        name: "Ponu",
+        age: 12,
+        roll: "007",
+        marks: [90, 78, 89, 88, 93],
+
+        total: 0,
+        percentage: 0,
+        grade: "",
+
+        setTotal: function (total) {
+            t = 0
+            this.marks.forEach(function (m) {
+                t += m
+            });
+
+            this.total = t
+        }
+        ,
+        setPercentage: function () {
+            this.percentage = this.total / 5.0
+        }
+
+        ,
+        setGrade: function () {
+            if (this.percentage >= 75 && this.percentage <= 100) {
+                this.grade = "A"
+            }
+            else if (this.percentage >= 50 && this.percentage < 75) {
+                this.grade = "B"
+
+            }
+            else if (this.percentage >= 35 && this.percentage < 50) {
+                this.grade = "C"
+
+            }
+            else {
+                this.grade = "Fail"
+            }
+        }
+    }
+
+
+    students.setTotal()
+    students.setPercentage()
+    students.setGrade()
+
+    console.log(students)
+</script>

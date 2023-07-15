@@ -1,0 +1,37 @@
+<script>
+
+function Person()
+{
+    this.name="Khujeriya Ji",
+    this.age=23,
+    this.mobile="3456789",
+    this.city="Pune",
+    this.setName=function(name)
+    {
+        this.name=name
+    }
+}
+
+
+p=new Person()
+
+console.log(p.name)
+p.setName("Puniyaa Bhiya")
+console.log(p.name)
+
+p.pincode=68688
+
+
+console.log(p)
+
+p.setAge=function(age)
+{
+    this.age=age
+}
+
+p.setAge(24)
+
+console.log(p)
+
+
+</script>

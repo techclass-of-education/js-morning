@@ -1,0 +1,90 @@
+<script>
+
+
+// class A {
+//         constructor() {
+
+//         }
+
+//     }
+
+
+//     class B extends A
+//     {
+//         constructor()
+//         {
+          
+            
+//         }
+//     }
+
+//     b=new B()
+    // Uncaught ReferenceError: Must call super constructor in derived class 
+    // before accessing 'this' or returning from derived constructor
+
+////////////////////////////////////
+
+    class A {
+        constructor() {
+
+        }
+
+    }
+
+
+    class B extends A
+    {
+        constructor()
+        {
+          super() //super class constructor call
+            
+        }
+    }
+
+    b=new B()
+
+
+/////////////////////////////////////////////
+
+    
+    class C {
+        constructor(n) {
+
+        }
+
+    }
+
+
+    class D extends C
+    {
+        constructor()
+        {
+          super(10)
+            
+        }
+    }
+
+    d=new D()
+
+/////////////////////////////////////////////////
+
+    class E {
+        constructor(n) {
+
+        }
+
+    }
+
+
+    class F extends E
+    {
+        constructor(n)
+        {
+          super(n)
+            
+        }
+    }
+
+    f=new F(100)
+
+</script>

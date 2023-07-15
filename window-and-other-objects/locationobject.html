@@ -1,0 +1,58 @@
+<script>
+
+
+    setInterval(function () {
+        location.reload()
+    }, 3000)
+
+    function getURL() {
+        url = location.href
+
+        alert(url)
+    }
+
+
+    function setURL() {
+        url = document.getElementById("urltxt").value
+
+        location.href = url
+    }
+
+    function pageReload() {
+        setTimeout(function () {
+            location.reload()
+        }, 3000)
+
+    }
+
+</script>
+
+<pre>
+
+<img src="4k-backgrounds.jpg" height="300">
+
+
+<button onclick="getURL()">Url</button>
+
+
+
+<input type="url" id="urltxt">
+<button onclick="setURL()">Url</button>
+
+
+<button onclick="pageReload()">Reload</button>
+
+
+
+
+host
+port
+pathname
+href
+protocol
+hostname
+
+
+
+
+</pre>

@@ -1,0 +1,38 @@
+<script>
+    //Object passing
+    class A {
+        showA() {
+            console.log("class A method")
+        }
+    }
+
+
+    class B
+    {
+        constructor(a) //tightly coupled/depend
+        {
+            this.a=a //class A object stored in class B
+        }
+
+        showB()
+        {
+            
+            // this.a.showA()
+            console.log("class B method")
+        }
+
+        useMethods()
+        {
+            this.a.showA()//class A method showA called
+        }
+    }
+
+
+    a=new A() //class A object
+    b=new B(a) //class B object with class A object passed
+
+    b.useMethods()
+    b.showB()
+
+
+</script>

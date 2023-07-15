@@ -1,0 +1,55 @@
+<pre>
+
+JSON  JavaScript Object Notations
+
+to Intechange info/data between server and client    also if they are cross plateforms
+
+
+
+</pre>
+
+
+<script>
+
+    data=[
+        {
+            name:"Rohan",
+            age:34,
+            mobile:"23456789"
+        },
+        {
+            name:"Manish",
+            age:34,
+            mobile:"93456789"
+        },
+        {
+            name:"Piyush",
+            age:34,
+            mobile:"43456789"
+        },
+        {
+            name:"VIjay",
+            age:34,
+            mobile:"83456789"
+        },
+    ]
+
+
+    console.log(data)
+
+   jsonData= JSON.stringify(data)
+
+   console.log(jsonData)
+
+
+//    send to php server  using AJAX
+
+// receive a json of ASSOCIATIVE ARRAY from php 
+
+phpData=JSON.parse(jsonData)
+console.log(phpData)
+
+
+
+
+</script>

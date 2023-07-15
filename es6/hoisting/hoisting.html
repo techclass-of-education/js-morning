@@ -1,0 +1,49 @@
+<pre>
+
+    Hoisting  : use variable before declaration (first initialization). But cannot use before initialization (first declaration)
+
+    let and const both not allow above
+
+</pre>
+
+
+
+<script>
+    // name="Yogesh"  //initialization  Uncaught ReferenceError: Cannot access 'name' before initialization
+
+
+    // console.log(name) 
+
+
+    // const name="Harish"  //declaration  
+
+    // ////////////////////////////////
+    // name="Yogesh"  //initialization Uncaught ReferenceError: Cannot access 'name' before initialization
+
+
+    // console.log(name)  
+
+
+    // let name="Harish"  //declaration
+
+
+
+    name = "Yogesh"  //initialization 
+
+
+    console.log(name)
+
+
+    var name = "Harish"  //declaration
+    console.log(name)
+
+
+
+    var num //declaration
+
+    console.log(num)
+
+    num = 10 //initialization 
+
+
+</script>

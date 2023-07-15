@@ -1,0 +1,55 @@
+<pre>
+
+    HTMLCollection => takes live updates
+
+    NodeList => its a static List no live updates
+</pre>
+
+<ul class="list">
+    <li><a href="#">One</a></li>
+    <li><a href="#">Two</a></li>
+    <li><a href="#">Three</a></li>
+    <li><a href="#">Four</a></li>
+    <li><a href="#">Five</a></li>
+</ul>
+
+
+<script>
+   
+
+    list = document.querySelector(".list")
+
+    collection = list.children
+
+    arrElmnts=Array.from(collection)
+
+    arrElmnts.forEach(function(li)
+    {
+        console.log(li.nodeName)
+    })
+
+    console.log(collection)
+
+    nodes = list.childNodes
+    console.log(nodes)
+
+
+    li = document.createElement("li")
+    textNode = document.createTextNode("Six")
+
+    li.appendChild(textNode)
+
+    list.appendChild(li)
+    console.log(nodes)
+
+    nodes.forEach(function(e)
+    {
+        e.appendChild(document.createElement("a"))
+    });
+
+
+    // console.log(nodes)
+
+    
+   
+</script>

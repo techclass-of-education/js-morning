@@ -1,0 +1,23 @@
+
+    <div id="d1" class="container"> Hello</div>
+
+
+<input id="d2"  type="range" min="0" max="200" onchange="changeWidth()">
+
+
+<style>
+    .container {
+        border: solid black;
+     
+    }
+</style>
+
+<script>
+    function changeWidth() {
+
+        
+        let w = document.getElementById("d2").value
+        
+        document.getElementById("d1").style="width:"+w*3+"px"
+    }
+</script>

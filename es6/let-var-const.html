@@ -1,0 +1,58 @@
+<script>
+
+
+
+
+    {
+
+
+        let n = 10
+
+        // let n=30  //error because of redeclaration in same scope of n declared
+
+        n = 30 // this n is scopped only for this block
+
+    }
+
+    let n = 90  //different n from above block n 
+
+
+
+
+
+
+    var a = 10
+    var a = 30
+
+
+    b = 10
+    b = 80
+
+
+    const x = 10
+    //x=10 //Uncaught TypeError: Assignment to constant variable. //only it can use cannot reinitialise 
+
+    add = 19 + x
+
+    const arr = [4, 34, 12, 90]
+
+    arr[2] = 15
+
+    //arr = 20 //Uncaught TypeError: Assignment to constant variable.
+
+
+    const y = {
+        name: "Tina",
+        age: 34
+    }
+
+    y.name = "Rakesh"
+
+   // y = 34 //Uncaught TypeError: Assignment to constant variable.
+
+
+
+
+
+
+</script>

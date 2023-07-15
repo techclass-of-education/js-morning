@@ -1,0 +1,26 @@
+<script>
+
+
+    class A
+    {
+        show()
+        {
+            console.log("class A")
+        }
+    }
+
+    class B extends A
+    {
+        show() //overriden method show of class A
+        {
+            super.show()
+            console.log("class B")
+        }
+    }
+
+
+    b=new B()
+    b.show()//it will call class B method
+
+
+</script>

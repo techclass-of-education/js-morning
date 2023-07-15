@@ -1,0 +1,60 @@
+<p id="p1">Data</p>
+<p id="p2">Data</p>
+<p id="p3">Data</p>
+<pre>
+
+Select paragraph :
+<select id="sp">
+	<option>p1</option>
+	<option>p2</option>
+	<option>p3</option>
+</select>
+
+<button>Get</button>
+<input id="inpt">
+<button onclick="setParagraph()">Set</button>
+</pre>
+
+<script>
+	function getSelectVal()
+	{	
+		return document.getElementById("sp").value
+	}
+	
+	function getInputVal()
+	{	
+		return document.getElementById("inpt").value
+	}
+	
+	function getParaObj(id)
+	{
+		return document.getElementById(id)
+	}
+	function setParagraph()
+	{
+		p=getSelectVal()
+		
+		if(p=="p1")
+		{
+			para=getParaObj(p)
+			para.innerHTML=getInputVal()
+		}
+		else if(p=="p2")
+		{
+			para=getParaObj(p)
+			para.innerHTML=getInputVal()
+		}
+		else
+		{
+			para=getParaObj(p)
+			para.innerHTML=getInputVal()
+		}
+		
+		
+		
+	}
+	
+	
+
+</script>
+

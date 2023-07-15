@@ -1,0 +1,28 @@
+<script>
+
+function changeStyle(e)
+{
+	if(e.key=="Tab")
+	{
+		document.getElementById("div").style="background-color:red";
+	}
+	
+	
+}
+
+
+</script>
+<style>
+div
+{
+height:200px;
+width:300px;
+}
+</style>
+<body>
+<div id="div">
+</div>
+
+<input onkeyup="changeStyle(event)">
+
+</body>

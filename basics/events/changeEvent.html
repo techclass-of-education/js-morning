@@ -1,0 +1,25 @@
+<textarea onchange="changeFun('textarea')"></textarea>
+<hr>
+<input onchange="changeFun('textfield')">
+<hr>
+<select multiple onchange="changeFun('list')">
+	<option>One</option>
+	<option>Two</option>
+	<option>THree</option>
+	<option>Four</option>
+</select>
+
+<hr>
+<select onchange="changeFun('dropdown')">
+	<option>One</option>
+	<option>Two</option>
+	<option>THree</option>
+	<option>Four</option>
+</select>
+
+<script>
+function changeFun(ele)
+{
+	alert(ele)
+}
+</script>

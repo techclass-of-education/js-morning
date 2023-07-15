@@ -1,0 +1,308 @@
+<pre>
+
+    +: One or more quantifiers (preceding character must exist and can be optionally duplicated). For example, the expression c+at will match “cat”, “ccat” and “ccccccccat”. You can repeat the preceding character as many times as you like and you’ll still get a match.
+    ?: Zero or one quantifier (preceding character is optional). For example, the expression c?at will only match “cat” or “at”.
+    *: Zero or more quantifier (preceding character is optional and can be optionally duplicated). For example, the expression c*at will match “at”, “cat” and “ccccccat”. It’s like the combination of + and ?.
+    \: this “escape character” is used when we want to use a special character literally. For example, c\* will exactly match “c*” and not “ccccccc”.
+    [^]: this “negate” notation is used to indicate a character that should not be matched within a range. For example, the expression b[^a-c]ld will not match “bald” or “bbld” because the second letters a to c are negative. However, the pattern will match “beld”, “bild”, “bold” and so forth.
+    .: this “do” notation will match any digit, letter or symbol except newline. For example, .{8} will match a an eight-character password consisting of letters, numbers and symbols. for example, “password” and “P@ssw0rd” will both match.
+
+
+    /regexp/
+ /^regexp$/    hello6868*
+    /^s....t$/     sabcdt matched    styyt not matched
+
+
+
+    /abc/  one time matched      abc123abc  matched
+
+
+    /[0-9]/    /[a-z]/    /[A-Z]/     [^0-9] [not0-9]
+
+
+    . period  => (t)  ..(ab)  .....(abcnn)
+
+
+
+    * zero or more
+
+    ab*c  
+    
+    ac  matched
+
+    adc not matched        abccc matched    a78cccc not matched  
+
+
+
+    + one or more
+
+    ab+c  
+    
+    ac  not matched
+
+    adc not matched        abccc matched    a78cccc not matched  abbbc 
+
+
+    ? zero or more
+
+    ab?c  
+    
+    ac  matched
+
+    adc not matched        abccc matched    a78cccc not matched 
+
+
+    {n,m}   n minimum    m maximum
+    
+    s{2,6}    s=> 2 minimum    6 maximum
+
+    {n}
+    ab{3}
+
+    sbc not matched
+
+    ss4545  matched
+
+    ssssss456456  matched
+
+    [a-z]{2,4}  alphabates minimum 2 times and maximum 4
+    awow
+
+
+    a|b alternation  a or b
+
+    vcb matched
+
+    vce not matched
+
+    anjkjhb matched
+
+    akjhjk matched
+
+    
+    () group
+
+    (s|v)abc
+
+    sabc matched
+
+    sab  not matched
+
+    vab not matched
+    vabc matched
+
+    sv abc not matched
+
+    dshfkshksvabcsdfkhkgh matched
+
+
+    Sequence characters \A \b \B \s \S  ...   
+
+    \Athe   At start
+
+    the moon going down  matched
+
+    A box not working   not  matched
+
+
+    \b  beginning  or end  special characters 
+
+
+    \bmss  starts with  (mss outgoing) matched
+
+    mss\b  ends with   (outgoing mss) matched
+
+
+    \B not beginning  or end  special characters 
+
+    \Bmss  not starts with  (mss outgoing)  not matched
+
+    mss\B  not ends with   (outgoing mss) not matched
+
+
+    \d   [0-9]  available
+    \D  [^0-9]  not available
+
+    \d  674kshfksh matched
+    \D 638nskhkdh not matched
+
+    \s whitespaces  \t \n 
+
+    \s  hey there  matched   heybhagwaan  not matched
+
+    \S  hey there not matched
+
+
+    \w  [0-9A-Za-z]
+    \W not[0-9A-Za-z]
+
+
+
+    \Z  ends with
+
+    boss\Z  he is boss  matched
+
+
+
+    /^ab/   
+    
+    const reg=/^ab/
+
+    const reg=new Regexp("/^ab/")
+
+
+    match()
+    matchAll()
+    test()
+
+
+    search()
+    replace()
+    split()
+    
+
+    s.match(regexp)  return matched string or null
+
+    if(s.match(regexp))
+    {
+        matched string
+    }else
+    {
+        null
+    }
+
+
+    g i m =>flags 
+    g global
+    i case insensitive
+    m multiline
+
+
+
+
+    only digits   /^[0-9]+$/      /\b[0-9]+\b/     /^\d+$/   /\b\d+\b/
+    
+    only alphabates      
+    /^[a-z]+$/i (i case insensitive)   
+    /^[a-zA-Z]+$/
+
+    /^[a-zA-Z]+$/
+    /[a-zA-Z]+/g (g match complete string)
+
+    /[a-z\n]/
+
+
+    alphanumeric 
+    /^[0-9a-z]+$/i
+
+    /^\w+$/i
+
+    mobile no 13 letters
+
+    /^[+][0-9]{2}[0-9]{10}$/  
++919876542367
+
+
+/^[+][0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}$/
++91-987-654-2367
+
+
+
+
+<input id="text" value="">
+<button onclick="regCheck()">Check</button>
+
+    <script>
+        function regCheck() {
+            let s = document.getElementById("text").value
+
+            const reg = new RegExp(/^[\w._-]+@[\w._-]+[.][a-z]{2,6}$/)
+
+            if (reg.test(s)) {
+                alert("Valid email-id")
+            }
+            else {
+                alert("Invalid email-id please check")
+            }
+        }
+
+
+       // +91-999-000-5455   /^[+][0-9]{2}[-][0-9]{3}[-][0-9]{3}[-][0-9]{4}$/
+
+       //    abc.xyz@hhbv.com   /^[\w._-]+@[\w._-]+[.][a-z]{2,6}$/
+       //   /^[\w._-]+@(gmail|yahoo)[.][a-z]{2,6}$/   => for yahoo and gmail only
+
+    </script>
+
+
+<pre>
+if (reg.test(s)) {
+    if () {
+        //name
+        if () {
+              //age  
+
+              alert("Successfully submited")
+        }
+        else {
+            alert("invalid age please check")
+        }
+
+    }
+    else {
+        alert("invalid name please check")
+    }
+
+}
+else {
+    alert("invalid email-id please check")
+}
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

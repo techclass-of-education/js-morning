@@ -1,0 +1,37 @@
+<pre>
+    aysnc  => use on any function and that function will return Promise
+
+
+    await => wait for complition of async function   (this await will get the async return promise object)
+</pre>
+
+
+<script>
+    async function add() {
+       
+        return (10 + 20)   // by default resolve function called
+    }
+
+
+    p = add()
+
+    
+
+
+    p.then(function (value) {
+        // resolve function body
+        alert(value)
+
+
+    }, function (error) {
+        // reject function body
+
+    }).then(function(){
+        alert("hello1")
+    }).then(function()
+    {
+        alert("hello2")
+    })
+
+
+</script>

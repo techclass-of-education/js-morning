@@ -1,0 +1,63 @@
+<pre>
+    Single Element
+    getElementById
+
+    Array Elements
+    getElementsTagName
+    getElementsClassName
+    getElementsName
+
+    Single Element
+    querySelector
+
+    Array Elements
+    querySelectorAll
+
+
+
+Downward=> children
+Upward =>parents
+Sideways => siblings
+
+</pre>
+
+
+<ul class="list">
+    <li id="li-1">
+        <a href="#">One</a>
+    </li>
+    <li><a href="#">Two</a></li>
+    <li><a href="#">Three</a></li>
+    <li><a href="#">Four</a></li>
+    <li><a href="#">Five</a></li>
+</ul>
+
+
+<script>
+    let li=document.querySelectorAll("li")[2]//
+    
+    let ul=li.parentElement
+
+    console.log(li)
+    console.log(ul)
+
+
+    let a=document.querySelector("a")
+    list=a.closest(".list") // return all parents
+    console.log(list)
+
+    li=a.closest("li")
+    console.log(li)
+
+    li=a.closest("#li-1")
+    console.log(li)
+
+    anchor=a.closest("a")
+    console.log(anchor)
+
+
+
+
+</script>
+
+

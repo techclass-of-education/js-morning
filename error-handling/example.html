@@ -1,0 +1,205 @@
+<pre>
+
+Error handling  /Exception handling
+
+//Syntax error cannot handle   => Error
+
+//logical/Symentic errors   => Exception  / Error
+
+try-catch and finally   throw
+
+
+try
+{
+    //suspected code
+}
+catch()
+{
+    // error handling code /msg
+}
+
+</pre>
+
+<script>
+
+
+    // console.log("..............Start program.............")
+
+
+    // console.log("Division=",(10/0))
+
+    // console.log("..............End program.............")
+
+
+
+    
+
+    // try{
+    // console.log("..............Start program.............")
+    // console.log("Division=",(n1/0)) // go to catch block
+    // console.log("..............End program.............")
+    // }
+    // catch(e)
+    // {
+    //     console.log("Inside catch block")
+    //     console.log(e.toString())
+    // }
+
+    // console.log("Rest of code")
+
+
+  
+
+
+
+    // ---
+    // ---
+
+    // try{
+    // ---   error  /// if error get handled then program will not stopped or terminated
+    // ---
+    // }
+    // catch(related-class obj)
+    // {
+    // error handling code /msg will run
+    //catch only run when try block have an error/exception
+    // }
+
+
+    //rest of code will run
+    // ---
+    // ---
+
+
+
+
+
+    // try {
+    //     n = 5
+    //     console.log(n)// ReferenceError  (class name)
+    // }
+    // catch (e) {
+    //     console.log("Exception:" + e)
+    // }
+
+    // console.log("Rest of code")
+    // console.log(2 + 3)
+
+
+    // let n = 8
+
+
+
+    // const num = 10
+
+    // console.log(num)
+
+    // try {
+    //     num = 4  //Error throw by JVM
+    //     console.log(num)
+    // }
+    // catch (e) {
+    //     // console.log(e) //TypeError: Assignment to constant variable. at example.html:68:13
+    //     console.log("My error:",e.message)  //Assignment to constant variable.
+    // }
+    // finally {
+    //     console.log("Finally block")
+    //     //cleanup code
+    //     //database connection close code
+    // }
+
+    // console.log("Rest of code")
+    // console.log(num + 3)
+
+
+
+
+    // voting code
+
+
+    // let age = 16  // age>=18
+
+
+    // if (age < 18) {
+    //     try {
+    //         // alert(age + " is invalid age")
+    //         e=new ReferenceError("Age "+age+" is invalid to vote")
+    //         throw e
+    //     }
+    //     catch (e) {
+    //             console.log(e)
+    //     }
+    // }
+    // else{
+    //     alert(age + " is valid age")
+    // }
+
+
+    // console.log("Rest of code")
+
+
+
+
+
+    // function checkAge(age) // this function throwing an error
+    // {
+    //     if (age >= 18) {
+    //         alert("Welcome to vote " + age)
+    //     }
+    //     else {
+    //         throw new Error("Age "+age + " is invalid to vote.")
+    //     }
+
+    // }
+
+    // try {
+    //     checkAge(22)
+    //     checkAge(16)
+    // } catch (e) {
+    //     console.log(e)
+    // }
+
+    // console.log("Rest of code")
+
+
+
+
+    class A
+    {
+        show()
+        {
+            throw new Error("This is a error to check Errors in class ")
+        }
+    }
+
+
+    a=new A()
+    try {
+        a.show()
+
+    } catch (e) {
+        console.log(e)
+
+    }
+
+    console.log("Rest of class code")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

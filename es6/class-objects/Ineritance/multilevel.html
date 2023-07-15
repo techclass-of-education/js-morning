@@ -1,0 +1,60 @@
+<pre>
+    Types of Inheritance
+1)Single Level
+class A=> (public member only) class B
+
+class B is a Subclass of class A
+
+class A is a Super class of class B
+
+
+2)Multilevel
+class A=> (public member only) class B => class C => class D  ----
+
+3)Heirarchcel
+
+//javascript does not support   (Mixing)
+4)Multilevel
+5)Hybrid
+
+</pre>
+
+
+<script>
+    //Single Level
+
+    class A {
+        n=10
+        showA() {
+            console.log("Class A Method")
+        }
+    }
+
+
+    class B extends A {
+        showB() {
+            console.log("Class B Method")
+        }
+    }
+
+    class C extends B {
+        showC() {
+            console.log("Class C Method")
+        }
+    }
+
+
+    c=new C()
+
+    c.showA()
+    c.showB()
+    c.showC()
+    console.log(c.n)
+
+
+
+
+
+
+
+</script>

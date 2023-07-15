@@ -1,0 +1,23 @@
+<script>
+
+    let win
+    function openWin() {
+        win = open("", "", "height=100, width=200")
+
+
+    }
+    function winResizeBy() {
+        win.resizeBy(500, 0)// resizeBy(x,y)
+    }
+
+    function winResizeTo() {
+        win.resizeTo(50, 1000)
+    }
+
+
+
+</script>
+
+<button onclick="openWin()">Open</button>
+<button onclick="winResizeBy()">By</button>
+<button onclick="winResizeTo()">To</button>

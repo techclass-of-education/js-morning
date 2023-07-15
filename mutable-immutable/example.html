@@ -1,0 +1,61 @@
+<script>
+
+let a=10
+let b=a
+b=b-4
+alert(a) // 10// immutable data
+
+
+/*
+stack memory  =>  a=10     b=10      // both a and b on different memory  
+
+change b=6   so, b has changed but a not
+
+*/
+
+
+
+let c=[20,12,45]
+
+let d=c
+
+d.pop()
+
+console.log(c) // mutable
+
+
+/*
+
+Heap  c and d both stored  here d has c reference both are shared same reference
+
+their references stored in stack   ref of c  and ref of d  (same)   thats why d and c mutable
+
+so, if i change in d then its will change in c also
+
+*/
+
+
+let e={name:"Person-1",age:45,mobile:"3456789"}
+
+let f=e
+
+f.age=12
+
+console.log(e)// mutable
+
+/*
+
+Heap  e and d both stored  here f has e reference both are shared same reference
+
+their references stored in stack   ref of e  and ref of f  (same)   thats why f and e mutable
+
+so, if i change in f then its will change in e also
+
+*/
+
+
+
+
+
+
+</script>

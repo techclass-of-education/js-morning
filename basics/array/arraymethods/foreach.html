@@ -1,0 +1,22 @@
+<script>
+
+    let arr = [3, 4, 6, 12, 67, 45, 90, 38]
+    alert(arr)
+
+    for (i = 0; i < arr.length; i++) {
+        console.log(arr[i] + " :" + i + " from arr=>" + arr)
+    }
+
+    function showarr(e, i, ar) {
+        console.log(e + " :" + i + " from arr=>" + ar)
+    }
+
+    arr.forEach(showarr);
+
+
+
+
+    arr.forEach(function (e, i, ar) {
+        console.log(e + " :" + i + " from arr=>" + ar)
+    });
+</script>

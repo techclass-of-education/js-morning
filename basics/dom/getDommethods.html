@@ -1,0 +1,85 @@
+<pre>
+
+DOM   Document Object Module     (document object)
+
+document store whole webpage inside itself
+
+	getElementById()
+
+	getElementsByTagName()  it returns array of all elements given tagname 
+
+	getElementsByClasName()   it returns array of all elements given class name 
+
+	getElementsByName()    it returns array of all elements given name attribute value 
+
+	querySelector()
+
+	querySelectorAll()
+
+</pre>
+
+
+
+<p>Paragraph <b>1</b></p>
+<p class="font">Paragraph <b>2</b></p>
+<div>Div 1</div>
+<p class="font">Paragraph 3</p>
+<div class="font">Div 2</div>
+
+<div class="font1">Div 3.1</div>
+
+<div class="font1">Div 3.2</div>
+
+<input name="txt" value="Text here">
+<textarea name="txt">Text here</textarea>
+
+
+<button onclick="setPara()">set css</button>
+
+
+
+<script>
+function setPara()
+{
+	let p=document.getElementsByTagName("p") // it returns array of all p tag
+
+	console.log(p[0].innerHTML) //innerHTML will return  tags of content and content both
+	console.log(p[1].innerText) //innerText will ignore tags of content
+	console.log(p[2].innerHTML) //innerHTML will return  tags of content and content both
+	
+	let fontEle=document.getElementsByClassName("font")
+
+	console.log(fontEle[0].innerHTML)
+	console.log(fontEle[1].innerHTML)
+	console.log(fontEle[2].innerHTML)
+	
+	let nameEle=document.getElementsByName("txt")
+	console.log(nameEle[0].value)
+	console.log(nameEle[1].value)
+// 	let qSel=document.querySelector(".font1")
+// 	console.log(qSel)
+// 	qSel.style="font-size:40px"
+
+// //console.log(p)
+// 	for(i=0;i<p.length;i++)
+// 	{
+// 		p[i].style="color:yellow;background:blue"
+// 	}	
+	
+	
+		for(i=0;i<fontEle.length;i++)
+		{
+		//console.log(fontEle[i].style)
+			fontEle[i].style="font-size:30px"
+		}	
+		
+		for(i=0;i<nameEle.length;i++)
+		{
+		//console.log(fontEle[i].style)
+			nameEle[i].style="color:red"
+		}	
+		
+		
+		
+}
+</script>

@@ -1,0 +1,41 @@
+<pre>
+
+prototype  => on constructor
+
+__proto__ => on object
+</pre>
+
+
+<script>
+
+function Person()
+{
+
+}
+
+p=new Person()
+
+console.log(Person.prototype)
+console.log(p.__proto__)
+
+
+console.log(Person.prototype==p.__proto__) //true
+
+
+Person.prototype.name="Roshan"
+
+Person.prototype.getName=function()
+{
+    return this.name
+}
+
+
+
+console.log(p.getName())
+
+
+
+
+
+
+</script>

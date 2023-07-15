@@ -1,0 +1,40 @@
+<script>
+// function1() // 5 sec 
+
+// function2() // 1 sec
+
+// in this case function2()  run before function1()
+
+// node js //  non blocking i/o 
+
+
+
+function function1()
+{
+    setTimeout(function()
+    {
+        console.log("Hello from function 1")
+    },2000)
+}
+
+
+function function2()
+{
+    console.log("Hello from function 2")
+}
+
+
+
+
+function1()
+function2()
+
+
+// IoC  Inversion of Control  use to control this before calling  (callbacks)
+
+
+
+
+
+
+</script>

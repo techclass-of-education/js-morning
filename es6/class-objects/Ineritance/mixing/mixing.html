@@ -1,0 +1,53 @@
+<script>
+    class A {
+
+    }
+
+
+
+    m1 = {
+        showA() {
+            console.log("class A")
+        }
+
+    }
+
+
+    m2 = {
+        showB() {
+            console.log("class B")
+        }
+    }
+
+
+    //assign()   setPrototypeOf()    =>  Object    
+
+    // prototype    
+
+    // console.log(A.prototype)
+
+
+    // Object.setPrototypeOf(A.prototype, m1)
+    // Object.setPrototypeOf(A.prototype, m2) //Uncaught TypeError: a.showA is not a function
+   
+
+    // a=new A()
+    // // a.showA()
+    // a.showB()
+
+    // console.log(A.prototype.showB)
+    // console.log(A.prototype.showA)
+
+
+
+    Object.assign(A.prototype, m1)// solution for  =>  Uncaught TypeError: a.showA is not a function
+    Object.assign(A.prototype, m2)// solution for  =>  Uncaught TypeError: a.showA is not a function
+
+    a=new A()
+    a.showA()
+    a.showB()
+
+    console.log(A.prototype.showB)
+    console.log(A.prototype.showA)
+
+</script>

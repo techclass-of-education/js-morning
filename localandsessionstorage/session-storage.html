@@ -1,0 +1,54 @@
+<pre>
+
+
+    localStorage  or sessionStorage     => window object
+
+
+    localStorage  =>  data will not expire ever  not effect on browser close also
+
+    sessionStorage => data will expire when browser closed
+
+    methods
+
+    setItem()
+    getItem()
+    clear()
+    removeItem()
+
+<h1>sessionStorage</h1>
+    data store in key=>value format
+
+
+</pre>
+
+
+<script>
+
+    function set() {
+        window.sessionStorage.setItem("name", "Umesh")
+        alert("stored")
+    }
+    function get() {
+        let name=window.sessionStorage.getItem("name")
+        alert("Name="+name)
+    }
+    function rmv() {
+        window.sessionStorage.removeItem("name")
+        alert("Removed")
+    }
+    function clearData() {
+        window.sessionStorage.clear()
+        alert("Removed All")
+
+    }
+
+
+
+</script>
+
+
+
+<button onclick="get()">Get Data</button>
+<button onclick="set()">Set Data</button>
+<button onclick="rmv()">Remove Data</button>
+<button onclick="clearData()">Clear Data</button>

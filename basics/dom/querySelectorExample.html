@@ -1,0 +1,21 @@
+<script>
+    function show() {
+        p2 = document.querySelector(".c-p2")
+        alert(p2.innerHTML)
+        p1 = document.querySelector("#p1")
+        alert(p1.innerHTML)
+        alert(document.querySelector("p[id='p4']").innerHTML)
+        alert(document.querySelector("p#p4").innerHTML)
+    }
+
+
+</script>
+
+
+
+<p id="p1">Para1 </p>
+<p class="c-p2">Para2 </p>
+<p class="c-p3">Para3 </p>
+<p id="p4">Para4 </p>
+
+<button onclick="show()">Show</button>

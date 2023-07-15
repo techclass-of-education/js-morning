@@ -1,0 +1,23 @@
+<script>
+    let a={name:"Person-1",age:45,mobile:"3456789"}
+
+
+    let b=Object.assign({},a)
+
+    b.age=12
+
+    console.log(a)  // a and b both are immutable
+
+
+
+    let c={name:"Person-1",age:45,mobile:"3456789"}
+
+    let d={...c}
+
+    d.age=12
+
+    console.log(c)  // c and d both are immutable
+
+
+
+</script>

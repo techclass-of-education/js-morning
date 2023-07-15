@@ -1,0 +1,44 @@
+<script>
+    class A {
+
+    }
+
+
+
+    m1 = {
+        showA() {
+            console.log("class A")
+        }
+    }
+
+
+    m2 = {
+        __proto__:m1,
+        showB() {
+            console.log("class B")
+        }
+    }
+
+    //assign()   setPrototypeOf()    =>  Object    
+
+    // prototype    
+
+    console.log(A.prototype)
+
+    Object.setPrototypeOf(A.prototype, m2)
+
+    a=new A()
+    a.showA()
+    a.showB()
+
+    console.log(A.prototype)
+    console.log(A.prototype.showB)
+    console.log(A.prototype.showA)
+
+    
+
+
+
+
+
+</script>

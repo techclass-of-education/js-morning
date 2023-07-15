@@ -1,0 +1,51 @@
+<script>
+    function addEvent() {
+
+        document.getElementById("btnOk").onmousemove = function () {
+            console.log("direct way mouse move")
+        }
+
+        document.getElementById("btnOk").onclick = function () {
+            alert("direct way")
+        }
+
+        document.getElementById("txt").onkeyup = function (e) {
+            alert(e.target.value)
+            alert(e.which)
+        }
+
+
+    }
+
+i=0
+    function addEventByListener() {
+        document.getElementById("btnOk").addEventListener("click", function () {
+            alert("using listner")
+        }
+        )
+
+
+        document.getElementById("btnOk").addEventListener("mousemove", function () {
+            i++
+            console.log("using listner mouse move "+i)
+        })
+    }
+
+
+</script>
+<pre>
+
+    eleobject.addEventListener("eventname",function) //add listener
+    
+    
+    eleobject.removeEventListener("eventname",function) //remove listener
+    
+
+    </pre>
+
+<button id="btnOk">Ok</button>
+
+<input type="text" id="txt">
+
+<button onclick="addEvent()">Add Event</button>
+<button onclick="addEventByListener()">Add Event</button>

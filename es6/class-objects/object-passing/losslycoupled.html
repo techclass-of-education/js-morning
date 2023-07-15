@@ -1,0 +1,51 @@
+<script>
+    //Object passing
+    class A {
+
+        showA() {
+            console.log("class A method")
+        }
+
+    }
+
+
+
+
+    class B
+    {
+        constructor() 
+        {
+          console.log("class B object")
+        }
+
+        setA(a)     //lossly coupled
+        {
+            this.a=a
+        }
+
+        showB()
+        {
+            // this.a.showA()
+            console.log("class B method")
+        }
+
+        useMethods()
+        {
+            this.a.showA()//class A method showA called
+        }
+    }
+
+
+   
+    b=new B()
+    b.showB()
+
+
+    a=new A()
+    a.showA()
+
+    //by choice showA class by class B
+    b.setA(a)
+    b.useMethods()
+   
+</script>

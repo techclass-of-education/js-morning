@@ -1,0 +1,41 @@
+<pre>
+    Object destructure
+</pre>
+
+
+<script>
+    p = {
+        name: "Tarun",
+        age: 34,
+        mobile: "23456789"
+    }
+
+    // n=p.name
+    // a=p.age
+    // m=p.mobile
+
+    let { name, age, mobile } = p
+    console.log(mobile)
+
+
+    // let {name,mobile}=p
+    // console.log(mobile)
+
+
+    function addition(n1, n2, n3) {
+        add = n1 + n2 + n3
+        sub = n2 - n1
+        mult = n1 * n2 * n3
+
+        return { v1: add, v2: sub, v3: mult }
+    }
+
+
+    let { v1, v2, v3 } = addition(4, 6, 12)
+
+    console.log(v3)
+
+
+
+
+</script>

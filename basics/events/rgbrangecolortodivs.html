@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div id="d1">
+
+    </div>
+
+    <div id="d2">
+
+    </div>
+
+    <div id="d3">
+
+    </div>
+
+</div>
+<label for="red">Red</label>
+<input id="red" type="range" min="0" max="255" onchange="changeColor()">
+<label for="green">Green</label>
+<input id="green" type="range" min="0" max="255" onchange="changeColor()">
+<label for="blue">blue</label>
+<input id="blue" type="range" min="0" max="255" onchange="changeColor()">
+
+<select id="divSel">
+    <option value="d1">Div1</option>
+    <option value="d2">Div2</option>
+    <option value="d3">Div3</option>
+</select>
+
+
+<style>
+    .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+.container div
+{
+    border: solid black 1px;
+    width: 200px;
+    height: 300px;
+}
+</style>
+
+<script>
+    function changeColor()
+    {
+        let r=document.getElementById("red").value
+        let g=document.getElementById("green").value
+        let b=document.getElementById("blue").value
+
+        let divId=document.getElementById("divSel").value
+
+        document.getElementById(divId).style="background-color:rgb("+r+","+g+","+b+")"
+
+    }
+</script>

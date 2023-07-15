@@ -1,0 +1,81 @@
+<pre>
+    producing code     =>  run in sometime
+
+
+    consuming code  => wait code  then procced
+
+
+    states    results
+
+    panding   undefined
+
+    fulfill   result =>success with value 
+
+    reject    result => error  what error
+</pre>
+
+
+<script>
+
+
+    // Promise(function(reslove,reject){
+    //     reslove()
+    //     reject()
+    // })
+
+
+    p = new Promise(function (success, fail)   // reslove and reject are functions as a args
+    {
+        // producing code   take sometime and get some result 
+
+        console.log("please wait......")
+        // let result = false
+        setTimeout(function () {
+            person = null //false
+            // person={  // true
+            //     name:"Roshan",
+            //     age:32,
+            //     id:2323
+            // }
+            if (person) {
+                success(person)
+
+            }
+            else {
+                fail("user not found some error there")
+            }
+        }, 3000)
+
+
+        // pending state    result is undefined
+
+
+    })
+
+    console.log(p)
+
+    //consuming code  it will wait 
+
+    p.then(
+        function (value) {
+        // fulfill state  result =>success with value 
+        console.log(p)
+        console.log(value.name)
+
+        // new Promise(function (r, e) {
+        //     r("success")
+        //     e("error")
+        // }).then(function (v) { }, function (e) { })
+
+        // resolve function called
+    }, function (error) {
+
+        //reject state   result => error  what error
+        console.log(p)
+        console.error(error)
+        // reject function called
+    }
+    )
+
+
+</script>

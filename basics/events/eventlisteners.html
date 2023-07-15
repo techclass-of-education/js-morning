@@ -1,0 +1,66 @@
+
+<div id="btn-div" style="border:2px solid black;padding:30px">
+
+
+</div>
+<br>
+<br>
+<button onclick="addBtn()">Add Button</button>
+<button onclick="addEvent()">Add Event</button>
+<button onclick="remvEvent()">Remove Event</button>
+<script>
+function addBtn()
+{
+	let div=document.getElementById("btn-div")
+	
+	div.innerHTML+="<hr><button class='btn'>Show</button>"
+}
+
+function addEvent()
+{
+	let btns=document.getElementsByClassName("btn")//buttons array
+	
+	console.log(btns)
+	
+	for(i=0;i<btns.length;i++)
+	{
+		btns[i].addEventListener("click",show)
+	}
+}
+
+function remvEvent()
+{
+	let btns=document.getElementsByClassName("btn")//buttons array
+	
+	for(i=0;i<btns.length;i++)
+	{
+		btns[i].removeEventListener("click",show)
+	}
+}
+
+function show()
+{
+	alert("This is a button with class='btn'")
+}
+
+
+
+</script>
+
+
+
+<pre>
+
+eleobject.addEventByListener("eventname",function) //add listener
+
+
+eleobject.removeEventListener("eventname",function) //remove listener
+
+
+
+
+
+</pre>
+
+
+

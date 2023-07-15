@@ -1,0 +1,26 @@
+<input placeholder="Email" id="email" type="email">
+<hr>
+<input type="password" id="pass">
+<hr>
+<button type="button" onclick="validate()">Login</button>
+
+
+<script>
+    function validate()
+    {
+        email=document.querySelector("#email").value;
+        pass=document.querySelector("#pass").value;
+
+        const regEmail = new RegExp(/^[\w._-]+@[\w._-]+[.][a-z]{2,6}$/)
+        const regPass = new RegExp(/^[\w*$@#]{2,8}$/)
+
+        if(email.match(regEmail) && pass.match(regPass))
+        {
+            alert("Welcome....")
+        }
+        else{
+            alert("Email/Password wrong")
+        }
+
+    }
+</script>

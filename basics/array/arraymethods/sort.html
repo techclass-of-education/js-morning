@@ -1,0 +1,50 @@
+<script>
+    let names = ["Umiaa", "Ishant", "Manya", "Rahul", "Kavita"]
+
+    names.sort()
+
+    alert(names)
+
+    n = [1, 3, 12, 2, 21, 7]
+
+
+    // function asending(n1, n2) {
+    //     return n1 - n2
+    // }
+
+    // function desending(n1, n2) {
+    //     return n2 - n1
+    // }
+
+    // n.sort(asending)
+
+    // alert(n)
+
+    // n.sort(desending)
+
+    // alert(n)
+
+
+
+    n.sort(
+    function(n1,n2)//anonymous function
+    {
+        return n1-n2
+    }
+    )
+
+    alert(n)
+
+
+
+    n.sort(
+    function(n1,n2)//anonymous function
+    {
+        return n2-n1
+    }
+    )
+
+    alert(n)
+
+
+</script>

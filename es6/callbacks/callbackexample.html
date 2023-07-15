@@ -1,0 +1,43 @@
+<script>
+
+    function function1(callback) {
+
+        console.log("Hello from function 1")
+
+
+        callback(2)
+        callback(3)
+        callback(4)
+        callback(5)
+    }
+
+
+    function function2(n) {
+        console.log(n + "-Hello from function callback")
+    }
+
+    // function1(function2)  // callback
+
+
+
+
+    setTimeout(function1, 2000, function2) // waiting callbacks
+
+    // IoC  Inversion of Control  use to control this before calling  (callbacks)
+
+    function runserver() {
+        setTimeout(function (v) {
+            console.log("server start")
+        }, 2000)
+
+    }
+    function userRequest() {
+        console.log("Server Response")
+
+    }
+
+
+    // runserver()// to run server
+    // userRequest()  // run in server
+
+</script>

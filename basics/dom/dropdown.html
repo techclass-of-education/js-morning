@@ -1,0 +1,26 @@
+<select id="digits">
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+    <option>Four</option>
+    <option>Five</option>
+    <option>Six</option>
+</select>
+
+<button onclick="addValue()">OK</button>
+
+<div id="box">
+Non form element
+</div>
+
+
+<script>
+
+    function addValue()
+    {
+        digit=document.getElementById("digits").value // form element
+        box=document.getElementById("box") //non form element
+
+        box.innerHTML= box.innerHTML+"<br>"+digit
+    }
+</script>

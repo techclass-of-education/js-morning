@@ -1,0 +1,59 @@
+<pre>
+    types of constructor
+    By default constructor
+    1)default  no need to create
+
+
+    customized constructor 
+    2)Simple  need to create
+    3)Prameterized need to create 
+</pre>
+
+<script>
+
+    class Addition{
+
+        constructor(n1,n2)
+        {
+            this.n1=n1
+            this.n2=n2
+        }
+
+
+        setNumbers(n1,n2)
+        {
+            this.n1=n1
+            this.n2=n2
+        }
+
+        setAdd()
+        {
+            this.add=this.n1+this.n2
+        }
+
+        getAdd()
+        {
+            console.log("Addition="+this.add)
+        }
+    }
+
+
+    a1=new Addition(20,30)
+    a1.setAdd()
+    a1.getAdd()
+    a1.setNumbers(6,4)
+    a1.setAdd()
+    a1.getAdd()
+
+    a2=new Addition(16,3)
+    a2.setAdd()
+    a2.getAdd()
+    
+   
+
+    // a1==>  (n1=0,n2=0)
+
+
+
+
+</script>

@@ -1,0 +1,38 @@
+<p class="p1">Para 1</p>
+<p class="p1">Para 2</p>
+<p id="para1">Para 3</p>
+<p id="para1">Para 4</p>
+<p id="para2">Para 5</p>
+
+
+
+<input name="digits" type="number">
+<hr>
+<pre>
+Male :<input name="gender" type="radio" value="male">
+
+Female :<input name="gender" type="radio" value="female">
+</pre>
+
+<button onclick="getParas()">Paragraphs</button>
+<button onclick="getInpts()">Inputs</button>
+
+
+<script>
+function getParas()
+{
+    arrP=document.querySelectorAll("#para1")
+    console.log(arrP)
+
+}
+
+
+function getInpts()
+{
+    arrInput=document.querySelectorAll("input[name='gender']")
+    console.log(arrInput)
+}
+
+</script>
+
+

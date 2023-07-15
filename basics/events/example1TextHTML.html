@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Internal Js</title>
+		<script>
+			function showMsgHTML(p)
+			{
+				alert(p.innerHTML);
+			}
+			function showMsgTxt(p)
+			{
+				alert(p.innerText);
+			}
+		</script>
+	</head>
+	
+	<body>
+		<p onclick="showMsgHTML(this)">para1 <b>click</b> here</p>
+		<p onclick="showMsgTxt(this)">para2 <b>click</b> here</p>
+	</body>
+	
+</html>

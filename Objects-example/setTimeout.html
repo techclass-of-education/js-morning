@@ -1,0 +1,21 @@
+<script>
+    let id
+function clickTimeout()
+{
+    id=setTimeout(function(n)
+    {
+        alert("hello")
+        document.write(n)
+    },5000,5)
+}
+
+
+function stopTimeout()
+{
+  clearTimeout(id)
+}
+</script>
+
+<button onclick="clickTimeout()">Click Here Start</button>
+<br>
+<button onclick="stopTimeout()">Click Here Stop</button>

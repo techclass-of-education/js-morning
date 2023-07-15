@@ -1,0 +1,127 @@
+<style>
+
+div
+{
+	height:200px;
+	border:solid red 2px;
+	width:300px;
+}
+
+.d1
+{
+	background-color:lightblue;
+	
+}
+
+#d2
+{
+	background-color:blue;
+	color:white;
+	overflow:auto;
+}
+</style>
+
+<pre>
+
+events  ->click->
+
+click
+dblclick
+
+mouseover 
+mouseenter
+mouseleave
+mousemove  (run on every px move)
+
+load   window load
+unload window unload
+
+resize window resize
+scroll scroll
+
+clipborad memory
+cut
+copy
+paste
+
+form elements
+change
+select
+blur
+focus
+
+keyboard
+keyup
+keypress
+keydown
+
+</pre>
+
+<button onclick="showAlert('click')">Click</button>
+
+<button ondblclick="showAlert('dblclick')">DBl Click</button>
+
+
+<!--<div class="d1" 
+onmousemove="mouseMoveFun()" 
+onmouseenter="mouseEnterFun()" 
+onmouseleave="mouseLeaveFun()" 
+onmouseover="mouseOverFun()"
+>
+-->
+
+<div class="d1" 
+onmousemove="mouseFun('move')" 
+onmouseenter="mouseFun('enter')" 
+onmouseleave="mouseFun('leave')" 
+onmouseover="mouseFun('over')"
+>
+
+
+</div>
+
+<div id="d2">
+
+
+</div>
+
+<script>
+
+
+function showAlert(ev)
+{
+	alert("event :"+ev)
+}
+
+/*function mouseMoveFun()
+{
+	document.getElementById("d2").innerHTML+="<br>mouseMove"
+}
+
+function mouseEnterFun()
+{
+	document.getElementById("d2").innerHTML+="<br>mouseEnter"
+}
+
+function mouseLeaveFun()
+{
+	document.getElementById("d2").innerHTML+="<br>mouseLeave"
+}
+
+function mouseOverFun()
+{
+	document.getElementById("d2").innerHTML+="<br>mouseOver"
+}
+*/
+
+function mouseFun(ev)
+{
+	document.getElementById("d2").innerHTML+="<br>mouse"+ev
+}
+
+</script>
+
+
+
+
+

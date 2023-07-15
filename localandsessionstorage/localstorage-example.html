@@ -1,0 +1,83 @@
+<pre>
+
+
+    localStorage  or sessionStorage     => window object
+
+
+    localStorage  =>  data will not expire ever  not effect on browser close also
+
+    sessionStorage => data will expire when browser closed
+
+    methods
+
+    setItem()
+    getItem()
+    clear()
+    removeItem()
+    
+<h1>localStorage</h1>
+
+    data store in key=>value format
+
+
+</pre>
+
+
+<script>
+
+data=[
+        {
+            name:"Rohan",
+            age:34,
+            mobile:"23456789"
+        },
+        {
+            name:"Manish",
+            age:34,
+            mobile:"93456789"
+        },
+        {
+            name:"Piyush",
+            age:34,
+            mobile:"43456789"
+        },
+        {
+            name:"VIjay",
+            age:34,
+            mobile:"83456789"
+        },
+    ]
+
+
+    // console.log(data)
+
+    function set() {
+        jsonData=JSON.stringify(data)
+        window.localStorage.setItem("persons", jsonData)
+        alert("stored")
+    }
+    function get() {
+        let persons = window.localStorage.getItem("persons")
+        p=JSON.parse(persons)
+       console.log(p[1].name+" has on age "+p[1].age)
+    }
+    function rmv() {
+        window.localStorage.removeItem("name")
+        alert("Removed")
+    }
+    function clearData() {
+        window.localStorage.clear()
+        alert("Removed All")
+
+    }
+
+
+
+</script>
+
+
+
+<button onclick="get()">Get Data</button>
+<button onclick="set()">Set Data</button>
+<button onclick="rmv()">Remove Data</button>
+<button onclick="clearData()">Clear Data</button>

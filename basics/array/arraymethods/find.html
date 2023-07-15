@@ -1,0 +1,21 @@
+<script>
+    
+    let a1 = [4, 6, 12, 56, 34, 12, 50]
+
+    // arr=new Array(4, 6, 12, 56, 34, 12, 50)
+
+    function checkValue(val)
+    {
+        return val>=500
+    }
+
+   let firstMatchVal=a1.find(checkValue) //if not found undefined
+
+   alert(firstMatchVal)
+
+//    alert("Is array?:"+Array.isArray(a1))
+
+   //if isArray() not a static method of class Array
+   //then it cannot use on non array variables 
+
+</script>

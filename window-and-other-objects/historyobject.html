@@ -1,0 +1,54 @@
+<script>
+
+// window => tab by default
+
+
+// window.alert()
+// window.document.getElementById()
+// window.history
+// window.location
+// window.navigator
+// window.console
+
+
+
+// history.back()// 1 back history page
+// history.forward()// 1 forward history page
+// history.go()// if -ve back  
+
+// history.length
+function backFun()
+{
+    history.back()
+}
+
+function forwardFun()
+{
+    history.forward()
+}
+
+function goFun()
+{
+    n=document.getElementById("historyNo").value
+    history.go(parseInt(n))
+}
+function lenFun()
+{
+   alert(history.length)
+}
+
+</script>
+
+<pre>
+<button onclick="backFun()">Back</button>
+<button onclick="forwardFun()">Forward</button>
+
+
+
+<input id="historyNo" type="number">
+<button onclick="goFun()">Go</button>
+
+
+<button onclick="lenFun()">Length</button>
+
+</pre>

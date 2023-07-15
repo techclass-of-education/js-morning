@@ -1,0 +1,26 @@
+<pre>
+Logical Operators   (true/false)
+
+AND  (&&)     both true then true otherwise false
+
+OR   (||)	  both false then false otherwise true
+
+NOT  (!) 	  invert   !true =false  /  !false=true
+
+join logical statements !(!(n1>n2) || n1>n3)
+</pre>
+
+<script>
+n1=30
+n2=12
+n3=23
+b=!(!(n1>n2) || (n1>n3)) 
+//!(!(true) || (true)) => !(false || (true)) => !(true)=>false
+console.log(b)
+
+b=!(!(n1>n2) && (n1>n3)) 
+//!(!(true) && (true)) => !(false && (true)) => !(false)=>true
+console.log(b)
+</script>
+
+

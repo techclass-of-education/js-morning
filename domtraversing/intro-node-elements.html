@@ -1,0 +1,26 @@
+nodes=> elements, text, comments => NodeList
+
+
+Element=> elements (tag element) => HTMLCollection
+
+
+
+
+<pre>
+    <!-- H1 here -->
+    <h1>Hello</h1>
+    only Text
+</pre>
+
+
+
+<script>
+    elmts=document.querySelector("pre").children  //children will return only elements
+    console.log(elmts)
+
+
+    elmts=document.querySelector("pre").childNodes  // will return only elements
+    console.log(elmts)
+
+
+</script>

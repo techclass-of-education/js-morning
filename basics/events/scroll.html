@@ -1,0 +1,96 @@
+<script>
+	var count=0
+function countScrolls()
+{
+	count++
+	document.getElementById("count-div").innerHTML="Scroll count="+count
+}
+
+function wheelFun(e)
+{
+	if(e.deltaY<0)
+	{
+		document.getElementById("count-div").innerHTML=e.deltaY +" wheel down"
+	}
+	else
+	{
+		document.getElementById("count-div").innerHTML=e.deltaY +" wheel up"
+
+	}
+
+
+	// alert("wheel")
+}
+
+
+function incDecVal(e,ele)
+{
+	if(e.deltaY<0)
+	{
+		ele.value=--count
+	}
+	else
+	{
+		ele.value=++count
+
+
+	}
+
+}
+
+</script>
+
+
+<input type="number" onwheel="incDecVal(event,this)">
+
+
+<div id="count-div"></div>
+<div id="div1" style="color:red"  onwheel="wheelFun(event)">
+	<br>
+	
+
+
+
+
+
+
+
+
+<pre>
+
+setter/getter
+scrollTop
+scrollBottom
+scrollLeft
+scrollRight
+
+document.getElementById("div1").scrollTop=56;//setter
+var s=document.getElementById("div1").scrollTop//getter
+
+document.getElementById("div1").style="background-color:blue"; document.getElementById("div1").style="background-color:blue";
+
+document.getElementById("div1").style="height:500px";
+
+
+
+
+
+
+
+
+</pre>
+</div>
+
+<style>
+div
+{
+	height:500px;
+	width:500px;
+	
+	border:1px solid red;
+	
+	overflow:auto;
+}
+
+
+</style>

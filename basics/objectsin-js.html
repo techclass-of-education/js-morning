@@ -1,0 +1,30 @@
+
+<pre>
+UI(html element) access in js
+
+window  object=>  document, location, history, navigator, console, ---
+
+window -> alert(), confirm(), prompt() ---
+
+document-> webpage  (html elements) -> getters(getElementById(), //unique element return
+												getElementsByTagName(), // array elements return
+												getElementsByClassName(),
+												getElementsByName(),
+												querySelector(),
+												querySelectorAll()											
+</pre>
+
+<p id="para" style="border:red solid 2px">
+This is paragraph
+</p>
+<button onclick="getText()">Get Text</button>	
+
+
+<script>
+	function getText()
+	{
+		p=document.getElementById("para")
+		txt=p.innerHTML
+		alert(txt)
+	}
+</script>											

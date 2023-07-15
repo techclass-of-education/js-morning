@@ -1,0 +1,44 @@
+<script>
+
+    class Addition{
+        setNumbers(n1,n2)
+        {
+            this.n1=n1
+            this.n2=n2
+        }
+
+        setAdd()
+        {
+            this.add=this.n1+this.n2
+        }
+
+        getAdd()
+        {
+            console.log("Addition="+this.add)
+        }
+    }
+
+
+    n=10
+    a1=new Addition()
+    a1.setAdd()
+    a1.getAdd()
+
+    
+    a1.setNumbers(20,39)
+    // a1.setNumbers(21,34)
+    a1.setAdd()
+    a1.getAdd()
+
+
+    a2=new Addition()
+    a2.setNumbers(3,99)
+    a2.setAdd()
+    a2.getAdd()
+
+    // a1==>  (n1=0,n2=0)
+
+
+
+
+</script>

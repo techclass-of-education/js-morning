@@ -1,0 +1,68 @@
+<pre>
+    Access Specifires/ Modifires
+
+    private    can make
+    public     by default all members are public in Javascript
+    protected  not exist
+</pre>
+
+
+
+<script>
+    class A
+    {
+        #num=100 //private variable
+        n=10
+        showA()
+        {
+            console.log("Class A")
+            this.#display()
+        }
+
+        #display() //private method
+        {
+            console.log("display method Class A Value="+this.#num)
+        }
+    }
+    
+    class B extends A
+    {
+    
+        showB()
+        {
+            console.log("Class B")
+        }
+    }
+    
+    class C extends A
+    {
+        //In derived class Context  protected member(s) available but private member(s) not
+        //but protectd variables/members not exist in Javascript
+    
+        showC()
+        {
+            console.log("Class C")
+        }
+    }
+    
+    
+    //outside class Context  private and protected not available
+    b=new B()
+    b.showA()
+    b.showB()
+    
+    c=new C()
+    c.showA()
+    c.showC()
+    console.log(c.n)
+    // c.showB() // hierarchical.html:37 Uncaught TypeError: c.showB is not a function
+
+    // c.display()
+    // c.num
+
+
+    
+    
+    
+    
+    </script>

@@ -1,0 +1,32 @@
+<script>
+    let id
+    function clickInterval() {
+        let div = document.getElementById("IntrvalVals")
+        id = setInterval(function () {
+            div.innerHTML = div.innerHTML + "<br>hello"
+        }, 1000)
+    }
+
+
+    function stopInterval() {
+        clearTimeout(id)
+    }
+</script>
+
+<style>
+    div {
+        height: 400px;
+        width: 500px;
+        overflow-y: auto;
+    }
+</style>
+
+<div id="IntrvalVals">
+
+</div>
+
+
+
+<button onclick="clickInterval()">Click Here Start</button>
+<br>
+<button onclick="stopInterval()">Click Here Stop</button>
